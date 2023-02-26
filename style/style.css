@@ -1,0 +1,343 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+@font-face{
+    font-family: "mono";
+    src: url(../fonts/mono-font.ttf);
+}
+
+@font-face{
+    font-family: "pkmn";
+    src: url(../fonts/pkmn-font.ttf);
+}
+
+.generic {
+    margin: 0px;
+    font-family: "pkmn";
+}
+
+.large {
+    font-size: 32px;
+}
+
+.medium {
+    font-size: 24px;
+}
+
+.small {
+    font-size: 12px;
+}
+
+/*
+------------------------------------------------------------
+Start Screen
+------------------------------------------------------------
+*/
+
+#start-screen {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    display: grid;
+    grid-template-areas:
+        "1  2   3   4   5   6   7   8   9   10"
+        "36   37   38   39   40   41   42   43   44   11"
+        "35   64   65   66   67   68   69   70   45   12"
+        "34   63   84   85   86   87   88   71   46   13"
+        "33   62   83   96   97   98   89   72   47   14"
+        "32   61   82   95   100   99   90   73   48   15"
+        "31   60   81   94   93   92   91   74   49   16"
+        "30   59   80   79   78   77   76   75   50   17"
+        "29   58   57   56   55   54   53   52   51   18"
+        "28   27   26   25   24   23   22   21   20   19";
+
+    gap: 0 0;
+}
+
+#start-text {
+    position: absolute;
+    width: 141px;
+    left: calc(50% - 70px);
+    right: 50%;
+    bottom: 50%;
+
+    color: lightgray;
+    font-family: "mono";
+}
+
+.black-box {
+    background-color: black;
+}
+
+/*
+------------------------------------------------------------
+Battle Screen
+------------------------------------------------------------
+*/
+
+#battle-screen {
+    width: 100%;
+}
+
+/* -------------------------------- */
+
+#battle-area {
+    position: absolute;
+    top: 10px;
+
+    width: 98%;
+    height: 460px;
+    margin-left: 1%;
+}
+
+/* -------------------------------- */
+
+#opponent-pokeman {
+    display: none;
+    position: absolute;
+    width: 600px;
+    height: 190px;
+    border-radius: 5px;
+}
+
+#opponent-css-assist {
+    position: absolute;
+    bottom: 0px;
+
+    width: 100%;
+    height: 120px;
+
+    border-left-width: 10px;
+    border-left-style: solid;
+    border-left-color: black;
+
+    border-bottom-width: 10px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#opponent-health-label {
+    position: absolute;
+    top: calc(50% - 12px);
+    left: 10px;
+}
+
+#opponent-health-bar {
+    position: absolute;
+    left: 80px;
+    top: calc(50% - 10px);
+
+    height: 20px;
+    width: 75%;
+
+    border-style: solid;
+    border-color: black;
+    border-radius: 3px;
+}
+
+#opponent-health {
+    height: 100%;
+    width: 100%;
+
+    background-color: green;
+}
+
+/* -------------------------------- */
+
+#player-pokeman {
+    display: none;
+    position: absolute;
+
+    right: 0px;
+    bottom: 0px;
+    width: 600px;
+    height: 190px;
+    border-radius: 5px;
+}
+
+#player-css-assist {
+    position: absolute;
+    bottom: 0px;
+
+    width: 100%;
+    height: 120px;
+
+    border-right-width: 10px;
+    border-right-style: solid;
+    border-right-color: black;
+
+    border-bottom-width: 10px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#player-health-label {
+    position: absolute;
+    top: calc(50% - 12px);
+    left: 10px;
+}
+
+#player-health-bar {
+    position: absolute;
+    left: 80px;
+    top: calc(50% - 10px);
+
+    height: 20px;
+    width: 75%;
+
+    border-style: solid;
+    border-color: black;
+    border-radius: 3px;
+}
+
+#player-health {
+    height: 100%;
+    width: 100%;
+
+    background-color: green;
+}
+
+/* -------------------------------- */
+
+#textbox {
+    position: absolute;
+    bottom: 10px;
+    left: 1%;
+
+    width: 98%;
+    height: 250px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+}
+
+#dialogue {
+    margin-left: 20px;
+    font-family: "mono";
+}
+
+#confirm-arrow {
+    display: none;
+
+    position: absolute;
+    right: 30px;
+    bottom: -30px;
+
+    font-size: 40px;
+}
+
+/* -------------------------------- */
+
+#fight-options {
+    position: absolute;
+    top: -9px;
+    right: 7px;
+
+    width: 45%;
+    height: 232px;
+
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+
+    align-content: center;
+    justify-content: space-around;
+    display: grid;
+    grid-template-areas:
+        "fight  pkmn"
+        "items  run";
+
+    gap: 33% 10%;
+}
+
+#fight{ grid-area: fight; list-style: "► "; }
+#pkmn{ grid-area: pkmn; list-style: none;}
+#items{ grid-area: items; list-style: none; }
+#run{ grid-area: run; list-style: none; }
+
+li {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/*
+------------------------------------------------------------
+Pokemen
+------------------------------------------------------------
+*/
+
+#pikaman {
+    display: none;
+    position: absolute;
+    top: 245px;
+    left: 250px;
+    height: 200px;
+}
+
+#pikamanR {
+    display: none;
+    position: absolute;
+    top: 245px;
+    left: 250px;
+    height: 200px;
+}
+
+#pikaman-turning {
+    display: none;
+    position: absolute;
+    top: 245px;
+    left: 250px;
+    height: 200px;
+}
+
+#pikaman-looking {
+    display: none;
+    position: absolute;
+    top: 245px;
+    left: 250px;
+    height: 200px;
+}
+
+/* -------------------------------- */
+
+#pokaball {
+    display: none;
+    position: absolute;
+}
+
+/* -------------------------------- */
+
+#puppet-master {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 250px;
+    height: 250px;
+}
+
+#puppet-masterR {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 250px;
+    height: 250px;
+}

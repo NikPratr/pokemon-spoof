@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section id="start-screen">
+        <h1 id="start-text">START GAME</h1>
+    </section>
+    
+    <section id="battle-screen">
+        <section id="battle-area">
+            <section id="pokemen">
+                <!-- <section>
+                    battle-areas -- Possible circular pad for pokemen to be centered on like in the later games
+                </section> -->
+
+                <img id="pikaman-turning" src="./images/pikaman-head-turn.png">
+                <img id="pikaman-looking" src="./images/pikaman-lookin-at-u.png">
+                <img id="pikaman" src="./images/pikaman-sitting.png">
+                <img id="pikamanR" src="./images/pikaman-sitting-red.png">
+
+                <img id="pokaball" src="./images/pokaball.png">
+
+                <img id="puppet-master" src="./images/puppet-master.png">
+                <img id="puppet-masterR" src="./images/puppet-master-red.png">
+            </section>
+
+
+            <section id="battle-stats">
+                <section id="opponent-pokeman">
+                    <h1 class="large generic">Lord of Shadows</h1>
+                    
+                    <section id="opponent-css-assist">
+                        <h1 id="opponent-health-label" class="medium generic">HP: </h1>
+                        
+                        <section id="opponent-health-bar">
+                            <div id="opponent-health"></div>
+                        </section>
+                    </section>
+                </section>
+
+
+                <section id="player-pokeman">
+                    <h1 class="large generic">Pikaman</h1>
+                    
+                    <section id="player-css-assist">
+                        <h1 id="player-health-label" class="medium generic">HP: </h1>
+                        
+                        <section id="player-health-bar">
+                            <div id="player-health"></div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+
+        <section id="textbox">
+            <section id="dialogue-cont">
+                <h2 id="dialogue"></h2>
+                <h3 id="confirm-arrow">⮟</h3>
+            </section>
+            <ul id="fight-options">
+                <li id="fight">FIGHT</li>
+                <li id="pkmn">PKMN</li>
+                <li id="items">ITEMS</li>
+                <li id="run">RUN</li>
+            </ul>
+        </section>
+    </section>
+
+    <script src="./script/script.js"></script>
+</body>
+</html>
